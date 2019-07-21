@@ -16,7 +16,7 @@ const createToken = (id: string): Promise<string> =>
     jwt.sign(
       { id },
       process.env.SECRET as string,
-      { issuer: process.env.ISSUER as string, expiresIn: '1yr' },
+      { issuer: process.env.JWT_ISSUER as string, expiresIn: '1yr' },
       (err, token) => {
         if (err) reject(err);
         resolve(token);
