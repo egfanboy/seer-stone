@@ -12,7 +12,7 @@
     "dev": "concurrently \"yarn watch\" \"nodemon ./build/index.js \"",
     "build": "tsc --build",
     "watch": "yarn build --watch",
-    "build:docker": "yarn bundle && docker build . -t ericturf:seer-stone",
+    "build:docker": "yarn bundle && docker build . -t ericturf/seer-stone",
     "bundle": "yarn build && webpack --progress --colors"
   },
   "devDependencies": {
